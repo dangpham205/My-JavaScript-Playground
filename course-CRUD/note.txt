@@ -1,0 +1,10 @@
+tạo folder json-server
+vô terminal : npm init
+rồi npm install(i) json-server
+tạo file db.json chứa data giả
+vô file package.json thêm dòng 7:
+    "start": "json-server --watch db.json",
+trỏ terminal vô folder json-server:
+    npm start
+vô localhost để xem data giả (port 3000):
+    http://localhost:3000/courses

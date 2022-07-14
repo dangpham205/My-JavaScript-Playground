@@ -1,0 +1,13 @@
+Các bạn hãy viết hàm render có 1 tham số courses, hàm render sẽ thêm các item của
+ mảng courses để tạo thành 1 danh sách các khóa học trên giao diện.
+
+var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
+function render(courses) {
+    var ul = document.querySelector('ul')
+    var htmls = courses.map(function(item, index){
+        return `<li> ${item} </li>`
+    })
+
+    ul.innerHTML = htmls.join('')
+}
+----------------------------------------------------------------------

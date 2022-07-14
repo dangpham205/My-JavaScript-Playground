@@ -1,0 +1,37 @@
+const app = (function (){
+	// Private
+	const cars = []
+
+	return {
+		add(car) {
+			cars.push(car)
+		}		
+		edit(index, car) {
+			cars[index] = car
+		}
+		delete(index) {
+			cars.splice(index, 1)
+		}
+	}
+})()
+
+chỉ những thứ đc return thì app mới truy cập đc,
+==> app.add('bmw') 
+app.cars thì không được vì không nằm trong nhg thứ return
+
+
+vd2:
+function createApp() {
+	const cars = [ ]
+	return {
+		add(car) {
+			cars.push(car)
+		}
+		show() {
+			console.log(cars)
+		}
+	}
+}
+const app = createApp()
+app.add() thì đc
+app.cars thì không được
